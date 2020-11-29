@@ -20,8 +20,11 @@ class LoginAsGuest_Page {
     get guestNameSection() { return $(".js--panel-guest.js--tracking-register > div:nth-of-type(1)") };
     get guestAddressSection() { return $(".register--guest .js--step-billing-address") };
     get guestEmailSection() { return $(".js--panel-guest .js--step:nth-of-type(2)") };
-    get acceptCookies() { return $(".cookie-banner--button-accept-minimum > i:nth-child(1)") };
-
+    get acceptCookies() { return $(".btn.is--primary.js--cookie-banner-accept") };
+  
+  clickAcceptCookies(){
+    return elementUtil.doClick(this.acceptCookies); 
+}
 
     clickAsGuestBtn() {
         return elementUtil.doClick(this.asGuestBtn);
@@ -103,9 +106,6 @@ class LoginAsGuest_Page {
 
     }
 
-    clickAcceptCookies() {
-        return elementUtil.doClick(this.acceptCookies);
-    }
 
     clickGuestPrivacyCheckbox() {
         return this.guestPrivacyCheckbox.click();

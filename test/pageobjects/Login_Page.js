@@ -7,11 +7,11 @@ class Login_Page {
     get submitBtn() { return $("[name] button"); }
     get loginError() { return $(".is--error .alert--content"); }
     get logoutBtn() { return $("[data-subcategory-nav] .link--logout") }
-    get acceptCookies() { return $(".cookie-banner--button-accept-minimum > i:nth-child(1)") };
-
-    clickAcceptCookies() {
-        return elementUtil.doClick(this.acceptCookies);
-    }
+    get acceptCookies() { return $(".btn.is--primary.js--cookie-banner-accept") };
+  
+  clickAcceptCookies(){
+    return elementUtil.doClick(this.acceptCookies); 
+}
 
     // my account PO
     get welcomeMsg() { return $(".account--welcome h1"); }

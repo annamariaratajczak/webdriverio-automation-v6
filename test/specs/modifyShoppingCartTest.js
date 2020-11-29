@@ -20,7 +20,6 @@ describe("Modify the shopping cart content:", () => {
   afterEach(function () {
     browser.deleteCookies();
     browser.deleteLocalStorage();
-
   });
 
   it("Test 1: Shopping cart page should have the right title", () => {
@@ -37,7 +36,6 @@ describe("Modify the shopping cart content:", () => {
     shoppingCart_Page.selectArticleQuantity();
     let quantity = shoppingCart_Page.getQuantityValue();
     expect(sumForSingleItem * quantity).to.equal(shoppingCart_Page.getTotalSumOfArticles());
-  
   });
 
   it("Test 4: Should be able to reverse the removal of the item from the shopping cart within 5 seconds from the removal", () => {

@@ -21,11 +21,11 @@ class ContactForm_Page {
     get successfulSubmissionAlert() { return $(".faq--success"); }
     get successfulSubmissionMsg() { return $(".faq--success .faq--response-headline"); }
     get unsuccessfulSubmissionMsg() { return $(".alert.is--error.js--faq-subject-required"); }
-    get acceptCookies() { return $(".cookie-banner--button-accept-minimum > i:nth-child(1)") };
-
-    clickAcceptCookies() {
-        return elementUtil.doClick(this.acceptCookies);
-    }
+    get acceptCookies() { return $(".btn.is--primary.js--cookie-banner-accept") };
+  
+  clickAcceptCookies(){
+    return elementUtil.doClick(this.acceptCookies); 
+}
 
     getFaqOverlayHeadline() {
         return this.faqOverlayHeadline.getText();

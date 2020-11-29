@@ -9,7 +9,7 @@ class ProductListing_Page {
   get browserTitle() { return $("/html/head/meta[5]");}
   get xBtnFlyout() { return $("[data-amount] .js--cart-item:nth-of-type(1) .icon--cross");}
   get emptyFlyoutText() { return $(".flyout-cart-item--empty-text");}
-  get acceptCookies() { return $(".cookie-banner--button-accept-minimum > i:nth-child(1)") };
+  get acceptCookies() { return $(".btn.is--primary.js--cookie-banner-accept") };
   
   clickAcceptCookies(){
     return elementUtil.doClick(this.acceptCookies); 
